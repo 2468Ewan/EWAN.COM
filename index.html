@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EwanMusical.app</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<header>
+    <div class="musicLogo">🎧</div>
+
+    <h1>EwanMusical<span>.app</span></h1>
+
+    <p>Écoute • Recherche • Découvre</p>
+</header>
+
+<div class="searchBox">
+
+    <div class="searchIcon">⌕</div>
+
+    <input
+        id="searchInput"
+        type="text"
+        placeholder="Rechercher un artiste..."
+        autocomplete="off"
+    >
+
+    <button
+        class="clearButton"
+        onclick="clearSearch()">
+        ×
+    </button>
+
+    <button
+        class="searchButton"
+        onclick="searchArtist()">
+        🔍
+    </button>
+
+</div>
+
+<div class="suggestions">
+
+    <button onclick="quickSearch('Elvis Presley')">
+        🎤 Elvis
+    </button>
+
+    <button onclick="quickSearch('Dadju')">
+        🎵 Dadju
+    </button>
+
+    <button onclick="quickSearch('Celine Dion')">
+        ⭐ Celine Dion
+    </button>
+
+</div>
+
+<div id="status"></div>
+
+<div id="artist"></div>
+
+<div id="results"></div>
+
+<button
+    id="moreButton"
+    onclick="loadMore()"
+    style="display:none;">
+
+    ➕ Charger plus
+
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
